@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EFMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Funcionario">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar" MaxLength="500" />
+    <Property Name="Sexo" Type="nvarchar" MaxLength="50" />
+    <Property Name="NumeroFuncionario" Type="int" />
+    <Property Name="Cargo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Seccao" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityContainer Name="EFMModelStoreContainer">
+    <EntitySet Name="Funcionario" EntityType="Self.Funcionario" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
